@@ -63,6 +63,14 @@ const TeamLeads = () => {
       name: "David Kim",
       role: "Tech Lead",
       department: "Architecture",
+      image: "https://res.cloudinary.com/dhkfjehat/image/upload/v1750791356/IMG-20250625-WA0002_en3il9.jpg",
+      bio: "System architect focused on scalable solutions and performance optimization."
+    },
+    {
+      id: 9,
+      name: "David Kim",
+      role: "Tech Lead",
+      department: "Architecture",
       image: "https://res.cloudinary.com/dhkfjehat/image/upload/v1750791355/IMG-20250625-WA0005_cp7ued.jpg",
       bio: "System architect focused on scalable solutions and performance optimization."
     },
