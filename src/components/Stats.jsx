@@ -7,13 +7,13 @@ const GamingClubStats = () => {
     awards: 0
   });
 
-  const finalNumbers = {
-    tournaments: 28,
-    events: 120,
-    awards: 5
-  };
-
   useEffect(() => {
+    const finalNumbers = {
+      tournaments: 28,
+      events: 120,
+      awards: 5
+    };
+
     const animateNumbers = () => {
       const duration = 2000;
       const steps = 60;
