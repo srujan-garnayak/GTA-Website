@@ -7,7 +7,7 @@ const TeamLeads = () => {
       name: "Sarah Chen",
       role: "Lead Developer",
       department: "Engineering",
-      image: "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=400&h=400&fit=crop&crop=face",
+      image: "https://res.cloudinary.com/dhkfjehat/image/upload/v1750791356/IMG-20250625-WA0001_rjvlko.jpg",
       bio: "Full-stack developer with 8+ years of experience in modern web technologies."
     },
     {
@@ -15,7 +15,7 @@ const TeamLeads = () => {
       name: "Marcus Johnson",
       role: "Design Lead",
       department: "UX/UI Design",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face",
+      image: "https://res.cloudinary.com/dhkfjehat/image/upload/v1750791356/IMG-20250625-WA0003_p0cx8a.jpg",
       bio: "Creative director specializing in user-centered design and brand strategy."
     },
     {
@@ -23,7 +23,7 @@ const TeamLeads = () => {
       name: "Elena Rodriguez",
       role: "Project Manager",
       department: "Operations",
-      image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&h=400&fit=crop&crop=face",
+      image: "https://res.cloudinary.com/dhkfjehat/image/upload/v1750791355/IMG-20250625-WA0004_zgx1rv.jpg",
       bio: "Agile expert with a passion for delivering exceptional user experiences."
     },
     {
@@ -31,7 +31,39 @@ const TeamLeads = () => {
       name: "David Kim",
       role: "Tech Lead",
       department: "Architecture",
-      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&crop=face",
+      image: "https://res.cloudinary.com/dhkfjehat/image/upload/v1750791355/IMG-20250625-WA0007_zdqadf.jpg",
+      bio: "System architect focused on scalable solutions and performance optimization."
+    },
+    {
+      id: 5,
+      name: "David Kim",
+      role: "Tech Lead",
+      department: "Architecture",
+      image: "https://res.cloudinary.com/dhkfjehat/image/upload/v1750791355/IMG-20250625-WA0006_f3hdgq.jpg",
+      bio: "System architect focused on scalable solutions and performance optimization."
+    },
+    {
+      id: 6,
+      name: "David Kim",
+      role: "Tech Lead",
+      department: "Architecture",
+      image: "https://res.cloudinary.com/dhkfjehat/image/upload/v1750791355/IMG-20250625-WA0008_lobfke.jpg",
+      bio: "System architect focused on scalable solutions and performance optimization."
+    },
+    {
+      id: 7,
+      name: "David Kim",
+      role: "Tech Lead",
+      department: "Architecture",
+      image: "https://res.cloudinary.com/dhkfjehat/image/upload/v1750791355/IMG-20250625-WA0009_glf4ff.jpg",
+      bio: "System architect focused on scalable solutions and performance optimization."
+    },
+    {
+      id: 8,
+      name: "David Kim",
+      role: "Tech Lead",
+      department: "Architecture",
+      image: "https://res.cloudinary.com/dhkfjehat/image/upload/v1750791355/IMG-20250625-WA0005_cp7ued.jpg",
       bio: "System architect focused on scalable solutions and performance optimization."
     },
   ];
@@ -50,28 +82,22 @@ const TeamLeads = () => {
           </p>
         </div>
 
-        {/* Team Flex Container - Fixed */}
-        <div className="w-full overflow-x-auto pb-4 scrollbar-hide">
-          <div className="flex gap-4 lg:gap-6 min-w-max px-4 lg:justify-center">
-            <style jsx>{`
-              .scrollbar-hide::-webkit-scrollbar {
-                display: none;
-              }
-            `}</style>
-            {teamLeads.map((lead) => (
-              <div
-                key={lead.id}
-                className="bg-gray-800 rounded-xl sm:rounded-2xl overflow-hidden shadow-2xl hover:shadow-3xl transform hover:-translate-y-2 transition-all duration-300 group flex-shrink-0 w-64 lg:w-72 xl:w-80 relative"
-              >
-                {/* Background Lighting Effect */}
-                <div className="absolute inset-0 bg-gradient-to-r from-blue-500/0 via-purple-500/0 to-blue-500/0 group-hover:from-blue-500/20 group-hover:via-purple-500/30 group-hover:to-blue-500/20 transition-all duration-500 rounded-xl sm:rounded-2xl"></div>
-                <div className="absolute inset-0 bg-gradient-radial from-transparent via-transparent to-transparent group-hover:from-blue-400/10 group-hover:via-purple-400/15 group-hover:to-transparent transition-all duration-700 rounded-xl sm:rounded-2xl"></div>
-                
-                {/* Glow Effect */}
-                <div className="absolute -inset-0.5 bg-gradient-to-r from-blue-500 via-purple-500 to-blue-500 rounded-xl sm:rounded-2xl opacity-0 group-hover:opacity-50 blur-sm transition-all duration-500"></div>
-                
-                {/* Card Content */}
-                <div className="relative bg-gray-800 rounded-xl sm:rounded-2xl h-full">
+        {/* Team Grid Container */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 lg:gap-8 mb-16">
+          {teamLeads.map((lead) => (
+            <div
+              key={lead.id}
+              className="bg-gray-800 rounded-xl sm:rounded-2xl overflow-hidden shadow-2xl hover:shadow-3xl transform hover:-translate-y-2 transition-all duration-300 group relative"
+            >
+              {/* Background Lighting Effect */}
+              <div className="absolute inset-0 bg-gradient-to-r from-blue-500/0 via-purple-500/0 to-blue-500/0 group-hover:from-blue-500/20 group-hover:via-purple-500/30 group-hover:to-blue-500/20 transition-all duration-500 rounded-xl sm:rounded-2xl"></div>
+              <div className="absolute inset-0 bg-gradient-radial from-transparent via-transparent to-transparent group-hover:from-blue-400/10 group-hover:via-purple-400/15 group-hover:to-transparent transition-all duration-700 rounded-xl sm:rounded-2xl"></div>
+              
+              {/* Glow Effect */}
+              <div className="absolute -inset-0.5 bg-gradient-to-r from-blue-500 via-purple-500 to-blue-500 rounded-xl sm:rounded-2xl opacity-0 group-hover:opacity-50 blur-sm transition-all duration-500"></div>
+              
+              {/* Card Content */}
+              <div className="relative bg-gray-800 rounded-xl sm:rounded-2xl h-full">
                 {/* Image Container */}
                 <div className="relative overflow-hidden">
                   <img
@@ -108,14 +134,13 @@ const TeamLeads = () => {
                     </button>
                   </div>
                 </div>
-                </div>
               </div>
-            ))}
-          </div>
+            </div>
+          ))}
         </div>
 
         {/* Bottom CTA Section */}
-        <div className="text-center mt-16">
+        <div className="text-center">
           <div className="bg-gradient-to-r from-gray-800 to-gray-700 rounded-xl sm:rounded-2xl p-6 sm:p-8 max-w-4xl mx-auto">
             <h2 className="text-2xl sm:text-3xl font-bold text-white mb-4">
               Start your journey
