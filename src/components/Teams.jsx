@@ -34,22 +34,6 @@ const TeamLeads = () => {
       image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&crop=face",
       bio: "System architect focused on scalable solutions and performance optimization."
     },
-    {
-      id: 5,
-      name: "Priya Patel",
-      role: "Data Lead",
-      department: "Analytics",
-      image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop&crop=face",
-      bio: "Data scientist driving insights and machine learning initiatives."
-    },
-    {
-      id: 6,
-      name: "Alex Thompson",
-      role: "DevOps Lead",
-      department: "Infrastructure",
-      image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop&crop=face",
-      bio: "Cloud infrastructure specialist ensuring reliable and secure deployments."
-    }
   ];
 
   return (
@@ -66,66 +50,68 @@ const TeamLeads = () => {
           </p>
         </div>
 
-        {/* Team Flex Container */}
-        <div className="flex justify-center gap-2 sm:gap-3 md:gap-4 lg:gap-6 overflow-x-auto pb-4 scrollbar-hide" style={{scrollbarWidth: 'none', msOverflowStyle: 'none'}}>
-          <style jsx>{`
-            .scrollbar-hide::-webkit-scrollbar {
-              display: none;
-            }
-          `}</style>
-          {teamLeads.map((lead) => (
-            <div
-              key={lead.id}
-              className="bg-gray-800 rounded-xl sm:rounded-2xl overflow-hidden shadow-2xl hover:shadow-3xl transform hover:-translate-y-2 transition-all duration-300 group flex-shrink-0 w-48 sm:w-56 md:w-64 lg:w-72 xl:w-80 min-w-48 sm:min-w-56 md:min-w-64 lg:min-w-72 xl:min-w-80 relative"
-            >
-              {/* Background Lighting Effect */}
-              <div className="absolute inset-0 bg-gradient-to-r from-blue-500/0 via-purple-500/0 to-blue-500/0 group-hover:from-blue-500/20 group-hover:via-purple-500/30 group-hover:to-blue-500/20 transition-all duration-500 rounded-xl sm:rounded-2xl"></div>
-              <div className="absolute inset-0 bg-gradient-radial from-transparent via-transparent to-transparent group-hover:from-blue-400/10 group-hover:via-purple-400/15 group-hover:to-transparent transition-all duration-700 rounded-xl sm:rounded-2xl"></div>
-              
-              {/* Glow Effect */}
-              <div className="absolute -inset-0.5 bg-gradient-to-r from-blue-500 via-purple-500 to-blue-500 rounded-xl sm:rounded-2xl opacity-0 group-hover:opacity-50 blur-sm transition-all duration-500"></div>
-              
-              {/* Card Content */}
-              <div className="relative bg-gray-800 rounded-xl sm:rounded-2xl h-full">
-              {/* Image Container */}
-              <div className="relative overflow-hidden">
-                <img
-                  src={lead.image}
-                  alt={lead.name}
-                  className="w-full h-40 sm:h-48 md:h-56 lg:h-64 object-cover group-hover:scale-110 transition-transform duration-500"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-transparent opacity-60 group-hover:opacity-40 transition-opacity duration-300"></div>
+        {/* Team Flex Container - Fixed */}
+        <div className="w-full overflow-x-auto pb-4 scrollbar-hide">
+          <div className="flex gap-4 lg:gap-6 min-w-max px-4 lg:justify-center">
+            <style jsx>{`
+              .scrollbar-hide::-webkit-scrollbar {
+                display: none;
+              }
+            `}</style>
+            {teamLeads.map((lead) => (
+              <div
+                key={lead.id}
+                className="bg-gray-800 rounded-xl sm:rounded-2xl overflow-hidden shadow-2xl hover:shadow-3xl transform hover:-translate-y-2 transition-all duration-300 group flex-shrink-0 w-64 lg:w-72 xl:w-80 relative"
+              >
+                {/* Background Lighting Effect */}
+                <div className="absolute inset-0 bg-gradient-to-r from-blue-500/0 via-purple-500/0 to-blue-500/0 group-hover:from-blue-500/20 group-hover:via-purple-500/30 group-hover:to-blue-500/20 transition-all duration-500 rounded-xl sm:rounded-2xl"></div>
+                <div className="absolute inset-0 bg-gradient-radial from-transparent via-transparent to-transparent group-hover:from-blue-400/10 group-hover:via-purple-400/15 group-hover:to-transparent transition-all duration-700 rounded-xl sm:rounded-2xl"></div>
                 
-                {/* Department Badge */}
-                <div className="absolute top-2 sm:top-3 md:top-4 left-2 sm:left-3 md:left-4">
-                  <span className="bg-blue-600 group-hover:bg-purple-600 text-white px-2 sm:px-3 py-1 rounded-full text-xs sm:text-sm font-medium transition-colors duration-300">
-                    {lead.department}
-                  </span>
+                {/* Glow Effect */}
+                <div className="absolute -inset-0.5 bg-gradient-to-r from-blue-500 via-purple-500 to-blue-500 rounded-xl sm:rounded-2xl opacity-0 group-hover:opacity-50 blur-sm transition-all duration-500"></div>
+                
+                {/* Card Content */}
+                <div className="relative bg-gray-800 rounded-xl sm:rounded-2xl h-full">
+                {/* Image Container */}
+                <div className="relative overflow-hidden">
+                  <img
+                    src={lead.image}
+                    alt={lead.name}
+                    className="w-full h-48 md:h-56 lg:h-64 object-cover group-hover:scale-110 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-transparent opacity-60 group-hover:opacity-40 transition-opacity duration-300"></div>
+                  
+                  {/* Department Badge */}
+                  <div className="absolute top-3 md:top-4 left-3 md:left-4">
+                    <span className="bg-blue-600 group-hover:bg-purple-600 text-white px-3 py-1 rounded-full text-sm font-medium transition-colors duration-300">
+                      {lead.department}
+                    </span>
+                  </div>
+                </div>
+
+                {/* Content */}
+                <div className="p-4 md:p-5 lg:p-6">
+                  <h3 className="text-lg md:text-xl font-bold text-white mb-1 group-hover:text-blue-100 transition-colors duration-300">
+                    {lead.name}
+                  </h3>
+                  <p className="text-blue-400 group-hover:text-purple-300 font-medium mb-3 text-base transition-colors duration-300">
+                    {lead.role}
+                  </p>
+                  <p className="text-gray-300 group-hover:text-gray-200 text-sm leading-relaxed line-clamp-3 transition-colors duration-300">
+                    {lead.bio}
+                  </p>
+
+                  {/* Connect Button */}
+                  <div className="mt-4 pt-4 border-t border-gray-700 group-hover:border-gray-600 transition-colors duration-300">
+                    <button className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 group-hover:shadow-lg group-hover:shadow-purple-500/25 text-white font-medium py-2 px-4 rounded-lg text-base transition-all duration-300 transform hover:scale-105">
+                      Connect
+                    </button>
+                  </div>
+                </div>
                 </div>
               </div>
-
-              {/* Content */}
-              <div className="p-3 sm:p-4 md:p-5 lg:p-6">
-                <h3 className="text-base sm:text-lg md:text-xl font-bold text-white mb-1 group-hover:text-blue-100 transition-colors duration-300">
-                  {lead.name}
-                </h3>
-                <p className="text-blue-400 group-hover:text-purple-300 font-medium mb-2 sm:mb-3 text-sm sm:text-base transition-colors duration-300">
-                  {lead.role}
-                </p>
-                <p className="text-gray-300 group-hover:text-gray-200 text-xs sm:text-sm leading-relaxed line-clamp-3 transition-colors duration-300">
-                  {lead.bio}
-                </p>
-
-                {/* Connect Button */}
-                <div className="mt-3 sm:mt-4 pt-3 sm:pt-4 border-t border-gray-700 group-hover:border-gray-600 transition-colors duration-300">
-                  <button className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 group-hover:shadow-lg group-hover:shadow-purple-500/25 text-white font-medium py-2 px-3 sm:px-4 rounded-lg text-sm sm:text-base transition-all duration-300 transform hover:scale-105">
-                    Connect
-                  </button>
-                </div>
-              </div>
-              </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
 
         {/* Bottom CTA Section */}
