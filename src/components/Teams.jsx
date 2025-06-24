@@ -96,7 +96,7 @@ const TeamLeads = () => {
               <div className="absolute -inset-0.5 bg-gradient-to-r from-blue-500 via-purple-500 to-blue-500 rounded-xl sm:rounded-2xl opacity-0 group-hover:opacity-50 blur-sm transition-all duration-500"></div>
               
               {/* Card Content */}
-              <div className="relative bg-gray-800 rounded-xl sm:rounded-2xl h-full">
+              <div className="relative bg-gray-950 rounded-xl sm:rounded-2xl h-full">
                 {/* Image Container */}
                 <div className="relative overflow-hidden">
                   <img
