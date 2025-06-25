@@ -1,4 +1,5 @@
 import './App.css'
+import Navbar from './components/Navbar';
 import GamingClubStats from './components/Stats';
 import TeamLeads from './components/Teams'
 import 'pace-js';
@@ -9,6 +10,7 @@ function App() {
 
   return (
     <div>
+      <Navbar />
       <GamingClubStats />
       <TeamLeads />
     </div>

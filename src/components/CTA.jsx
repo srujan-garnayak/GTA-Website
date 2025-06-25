@@ -23,7 +23,7 @@ function CTA() {
               <h2 className="text-2xl sm:text-3xl font-bold text-white mb-4 transition-all duration-500 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-cyan-300 group-hover:via-white group-hover:to-cyan-300 group-hover:drop-shadow-lg font-mono tracking-wider">
                 &gt; START_YOUR_JOURNEY.exe
               </h2>
-              <p className="text-gray-400 text-base sm:text-lg mb-6 transition-all duration-500 group-hover:text-cyan-200 font-mono text-sm sm:text-base leading-relaxed">
+              <p className="text-gray-400 text-base sm:text-lg mb-6 transition-all duration-500 group-hover:text-cyan-200 font-mono leading-relaxed">
                 // Initiating neural connection to GTA mainframe...<br/>
                 // Accessing enhanced potential protocols...<br/>
                 // Status: READY FOR INTEGRATION
