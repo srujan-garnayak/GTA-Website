@@ -3,7 +3,7 @@ import CTA from "./CTA";
 import Leads from "../config";
 
 const TeamLeads = () => {
-    
+
     const teamLeads = Leads;
 
   return (
@@ -117,7 +117,7 @@ const TeamLeads = () => {
 
                         {/* Neural Interface Button */}
                         <button className="w-full bg-gradient-to-r from-gray-800 to-gray-900 hover:from-cyan-600 hover:to-blue-600 border border-cyan-500/30 hover:border-cyan-400 text-white font-mono py-3 px-6 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/10 hover:shadow-cyan-400/30 group-hover:shadow-xl">
-                          <span className="tracking-wider">NEURAL LINK</span>
+                          <span className="tracking-wider">CONNECT</span>
                         </button>
                       </div>
                     </div>
