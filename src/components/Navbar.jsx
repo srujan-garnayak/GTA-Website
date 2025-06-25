@@ -11,7 +11,7 @@ const Navbar = () => {
     { name: 'Events', href: '#' },
     { name: 'Team', href: '#team' },
     { name: 'About', href: '#' },
-    { name: 'Contact', href: '#' }
+    { name: 'Contact', href: '#connect' }
   ];
 
   useEffect(() => {
@@ -23,9 +23,20 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const handleLinkClick = (linkName) => {
+  const handleLinkClick = (linkName, href) => {
     setActiveLink(linkName);
     setIsMobileMenuOpen(false);
+    
+    // Handle smooth scrolling for anchor links
+    if (href.startsWith('#') && href !== '#') {
+      const targetElement = document.querySelector(href);
+      if (targetElement) {
+        targetElement.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+      }
+    }
     
     // Remove active state after animation
     setTimeout(() => {
@@ -84,7 +95,7 @@ const Navbar = () => {
                   href={link.href}
                   onClick={(e) => {
                     e.preventDefault();
-                    handleLinkClick(link.name);
+                    handleLinkClick(link.name, link.href);
                   }}
                   className={`
                     relative text-sm lg:text-base font-medium tracking-wide py-2 px-1 transition-all duration-300 group
@@ -100,7 +111,7 @@ const Navbar = () => {
                   <div 
                     className={`
                       absolute bottom-0 left-1/2 h-px bg-gradient-to-r from-transparent via-purple-500 to-transparent 
-                      transition-all duration-400 ease-out transform -translate-x-1/2
+                      transition-all duration-100 ease-out transform -translate-x-1/2
                       ${activeLink === link.name 
                         ? 'w-full opacity-100' 
                         : 'w-0 group-hover:w-full opacity-80'
@@ -154,7 +165,7 @@ const Navbar = () => {
                   href={link.href}
                   onClick={(e) => {
                     e.preventDefault();
-                    handleLinkClick(link.name);
+                    handleLinkClick(link.name, link.href);
                   }}
                   className={`
                     block text-base font-medium tracking-wide py-2 transition-all duration-300

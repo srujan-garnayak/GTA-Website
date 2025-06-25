@@ -3,7 +3,7 @@ import React from 'react'
 function CTA() {
   return (
     <div>
-      <div className="text-center">
+      <div id='connect' className="text-center">
           <div className="bg-gradient-to-br from-black via-gray-950 to-black border border-gray-800/50 rounded-xl sm:rounded-2xl p-6 sm:p-8 max-w-4xl mx-auto relative overflow-hidden group transition-all duration-700 hover:shadow-2xl hover:shadow-cyan-500/30 hover:border-cyan-500/30 hover:-translate-y-3 backdrop-blur-sm">
             {/* Animated neural network background */}
             <div className="absolute inset-0 opacity-10 group-hover:opacity-30 transition-opacity duration-700">
