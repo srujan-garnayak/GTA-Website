@@ -9,7 +9,7 @@ const Navbar = () => {
     { name: 'Home', href: '#' },
     { name: 'Games', href: '#' },
     { name: 'Events', href: '#' },
-    { name: 'Team', href: '#' },
+    { name: 'Team', href: '#team' },
     { name: 'About', href: '#' },
     { name: 'Contact', href: '#' }
   ];
@@ -38,7 +38,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-radial from-gray-900 via-black to-black text-white relative overflow-x-hidden">
+    <div className="min-h-fit bg-gradient-radial from-gray-900 via-black to-black text-white relative overflow-x-hidden">
       {/* Animated Background Particles */}
       <div className="fixed inset-0 z-0 pointer-events-none">
         <div 

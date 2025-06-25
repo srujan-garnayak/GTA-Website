@@ -7,7 +7,7 @@ const TeamLeads = () => {
     const teamLeads = Leads;
 
   return (
-    <div className="bg-black min-h-screen relative overflow-hidden">
+    <div id="team" className="bg-black min-h-screen relative overflow-hidden">
       {/* Animated Grid Background */}
       <div className="fixed inset-0 opacity-5">
         <div className="absolute inset-0" style={{
