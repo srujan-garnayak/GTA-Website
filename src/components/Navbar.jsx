@@ -6,7 +6,7 @@ const Navbar = () => {
   const [activeLink, setActiveLink] = useState('');
 
   const navLinks = [
-    { name: 'Home', href: '#' },
+    { name: 'Home', href: '#hero-section' },
     { name: 'Games', href: '#' },
     { name: 'Events', href: '#' },
     { name: 'Team', href: '#team' },
@@ -188,7 +188,7 @@ const Navbar = () => {
       </nav>
 
       {/* Demo Content */}
-      <div className="pt-32 px-6 md:px-10 relative z-10">
+      <div id='hero-section' className="pt-32 px-6 md:px-10 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 bg-gradient-to-r from-white via-purple-200 to-white bg-clip-text text-transparent">
             GTA Gaming Club
